@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(circle at top left, #ffe2e2 0%, #f5f0ff 45%, #eef4ff 100%);
+    color: #1d1d28;
+}
+
+.page-shell {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 32px;
+    align-items: center;
+    padding: 40px;
+    border-radius: 32px;
+    background: rgba(255, 255, 255, 0.93);
+    box-shadow: 0 28px 80px rgba(17, 24, 39, 0.12);
+}
+
+.badge {
+    display: inline-block;
+    background: #ef4444;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-bottom: 18px;
+}
+
+.hero-copy h1 {
+    margin: 0 0 16px;
+    font-size: clamp(2.8rem, 4vw, 4.6rem);
+    line-height: 1.02;
+}
+
+.hero-copy p {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.85;
+    max-width: 630px;
+    color: #3a3a4d;
+}
+
+.hero-actions {
+    margin-top: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 26px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: white;
+    box-shadow: 0 16px 30px rgba(37, 99, 235, 0.18);
+}
+
+.btn-secondary {
+    background: #111827;
+    color: white;
+}
+
+.hero-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-photo img {
+    width: 100%;
+    max-width: 420px;
+    height: 420px;
+    border-radius: 30px;
+    border: 10px solid white;
+    box-shadow: 0 26px 60px rgba(17, 24, 39, 0.18);
+    object-fit: cover;
+}
+
+.profile-details {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.card {
+    background: white;
+    border-radius: 26px;
+    padding: 28px;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+}
+
+.card-highlight {
+    grid-column: span 2;
+    background: linear-gradient(135deg, #fb7185 0%, #f97316 100%);
+    color: white;
+}
+
+.card-highlight h2,
+.card-highlight p {
+    color: white;
+}
+
+.card h2 {
+    margin-top: 0;
+    font-size: 1.6rem;
+}
+
+.card ul {
+    margin: 18px 0 0;
+    padding-left: 20px;
+    color: #4b5563;
+}
+
+.card ul li {
+    margin-bottom: 12px;
+}
+
+.card a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-copy h1 {
+        font-size: 3rem;
+    }
+
+    .profile-details {
+        grid-template-columns: 1fr;
+    }
+}
